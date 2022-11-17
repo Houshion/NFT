@@ -1,0 +1,788 @@
+{
+  // "condition": { //模式配置，仅开发期间生效
+  // 	"current": 0, //当前激活的模式(list 的索引项)
+  // 	"list": [{
+  // 		"name": "test", //模式名称
+  // 		"path": "pages/componentsA/test/test", //启动页面，必选
+  // 		"query": "" //启动参数，在页面的onLoad函数里面得到
+  // 	}]
+  // },
+  "easycom": {
+    "^com-(.*)": "@/components/com-$1/index.vue"
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/public/login",
+      "style": {
+        "navigationBarTitleText": "S.N.T",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/public/register",
+      "style": {
+        "navigationBarTitleText": "S.N.T",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "SNT首页",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/story",
+      "style": {
+        "navigationBarTitleText": "SNT绿洲",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/produce",
+      "style": {
+        "navigationBarTitleText": "介绍页面",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/news",
+      "style": {
+        "navigationBarTitleText": "最新消息",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/home/detail",
+      "style": {
+        "navigationBarTitleText": "SNT创始团队",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/nft/collection/list",
+      "style": {
+        "navigationBarTitleText": "我的藏品",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/nft/user/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/nft/main/home",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/nft",
+      "pages": [
+        {
+          "path": "user/set/index",
+          "style": {
+            "navigationBarTitleText": "设置",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/address/index",
+          "style": {
+            "navigationBarTitleText": "我的地址",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/address/manage",
+          "style": {
+            "navigationBarTitleText": "我的地址",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/invitation/index",
+          "style": {
+            "navigationBarTitleText": "邀请",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/invitation/invitation",
+          "style": {
+            "navigationBarTitleText": "邀请",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/notice/index",
+          "style": {
+            "navigationBarTitleText": "通知",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/agreement/user",
+          "style": {
+            "navigationBarTitleText": "用户协议",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/agreement/secret",
+          "style": {
+            "navigationBarTitleText": "隐私协议",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/agreement/us",
+          "style": {
+            "navigationBarTitleText": "关于我们",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/buy",
+          "style": {
+            "navigationBarTitleText": "购买订单",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/sell",
+          "style": {
+            "navigationBarTitleText": "寄售订单",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/airdrop",
+          "style": {
+            "navigationBarTitleText": "空投订单",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/transfer",
+          "style": {
+            "navigationBarTitleText": "转赠订单",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/notice/list",
+          "style": {
+            "navigationBarTitleText": "公告列表",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/notice/detail",
+          "style": {
+            "navigationBarTitleText": "公告",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/set/nickname",
+          "style": {
+            "navigationBarTitleText": "更改昵称",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "order/pay",
+          "style": {
+            "navigationBarTitleText": "订单支付",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/detail",
+          "style": {
+            "navigationBarTitleText": "订单详情",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/set/auth",
+          "style": {
+            "navigationBarTitleText": "实名认证",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/set/card/card",
+          "style": {
+            "navigationBarTitleText": "我的银行卡",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/set/card/add",
+          "style": {
+            "navigationBarTitleText": "添加银行卡",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "order/paySuccess",
+          "style": {
+            "navigationBarTitleText": "支付成功",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/set/changePass",
+          "style": {
+            "navigationBarTitleText": "修改密码",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/feedback/index",
+          "style": {
+            "navigationBarTitleText": "意见反馈",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "collection/commodity",
+          "style": {
+            "navigationBarTitleText": "藏品详情",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "collection/openBox",
+          "style": {
+            "navigationBarTitleText": "开盲盒",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "collection/boxList",
+          "style": {
+            "navigationBarTitleText": "盲盒内容列表",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/feedback/problems",
+          "style": {
+            "navigationBarTitleText": "常见问题",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "order/transfer",
+          "style": {
+            "navigationBarTitleText": "转赠",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "collection/collectionList",
+          "style": {
+            "navigationBarTitleText": "藏品列表",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "collection/boxRecord",
+          "style": {
+            "navigationBarTitleText": "开盒记录",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "user/integral/index",
+          "style": {
+            "navigationBarTitleText": "积分",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "mix/index",
+          "style": {
+            "navigationBarTitleText": "合成",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "mix/illustrate",
+          "style": {
+            "navigationBarTitleText": "点亮说明",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "mix/success",
+          "style": {
+            "navigationBarTitleText": "完成点亮",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "mix/list",
+          "style": {
+            "navigationBarTitleText": "点亮空间",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "main/question",
+          "style": {
+            "navigationBarTitleText": "常见问题",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "main/activity",
+          "style": {
+            "navigationBarTitleText": "活动日历",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "orderList/lightUp",
+          "style": {
+            "navigationBarTitleText": "点亮记录",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "recovery/index",
+          "style": {
+            "navigationBarTitleText": "藏品回购",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "recovery/list",
+          "style": {
+            "navigationBarTitleText": "官方回购",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "recovery/record",
+          "style": {
+            "navigationBarTitleText": "我的回购记录",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "recovery/confirm",
+          "style": {
+            "navigationBarTitleText": "回购订单确认",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/shop",
+      "pages": [
+        {
+          "path": "home/index",
+          "style": {
+            "navigationBarTitleText": "首页",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "my/index",
+          "style": {
+            "navigationBarTitleText": "个人中心",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "draw/index",
+          "style": {
+            "navigationBarTitleText": "一番赏",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "cart/index",
+          "style": {
+            "navigationBarTitleText": "购物车",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "main/index",
+          "style": {
+            "navigationBarTitleText": "S.N.T",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "home/search",
+          "style": {
+            "navigationBarTitleText": "搜索",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/example/components": {
+      "network": "all",
+      "packages": [
+        {
+          "root": "pages/nft",
+          "pages": [
+            {
+              "path": "user/set/index",
+              "style": {
+                "navigationBarTitleText": "设置",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/address/index",
+              "style": {
+                "navigationBarTitleText": "我的地址",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/address/manage",
+              "style": {
+                "navigationBarTitleText": "我的地址",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/invitation/index",
+              "style": {
+                "navigationBarTitleText": "邀请",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/invitation/invitation",
+              "style": {
+                "navigationBarTitleText": "邀请",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/notice/index",
+              "style": {
+                "navigationBarTitleText": "通知",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/agreement/user",
+              "style": {
+                "navigationBarTitleText": "用户协议",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/agreement/secret",
+              "style": {
+                "navigationBarTitleText": "隐私协议",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/agreement/us",
+              "style": {
+                "navigationBarTitleText": "关于我们",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/buy",
+              "style": {
+                "navigationBarTitleText": "购买订单",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/sell",
+              "style": {
+                "navigationBarTitleText": "寄售订单",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/airdrop",
+              "style": {
+                "navigationBarTitleText": "空投订单",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/transfer",
+              "style": {
+                "navigationBarTitleText": "转赠订单",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/notice/list",
+              "style": {
+                "navigationBarTitleText": "公告列表",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/notice/detail",
+              "style": {
+                "navigationBarTitleText": "公告",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/set/nickname",
+              "style": {
+                "navigationBarTitleText": "更改昵称",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "order/pay",
+              "style": {
+                "navigationBarTitleText": "订单支付",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/detail",
+              "style": {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/set/auth",
+              "style": {
+                "navigationBarTitleText": "实名认证",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/set/card/card",
+              "style": {
+                "navigationBarTitleText": "我的银行卡",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/set/card/add",
+              "style": {
+                "navigationBarTitleText": "添加银行卡",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "order/paySuccess",
+              "style": {
+                "navigationBarTitleText": "支付成功",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/set/changePass",
+              "style": {
+                "navigationBarTitleText": "修改密码",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/feedback/index",
+              "style": {
+                "navigationBarTitleText": "意见反馈",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "collection/commodity",
+              "style": {
+                "navigationBarTitleText": "藏品详情",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "collection/openBox",
+              "style": {
+                "navigationBarTitleText": "开盲盒",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "collection/boxList",
+              "style": {
+                "navigationBarTitleText": "盲盒内容列表",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/feedback/problems",
+              "style": {
+                "navigationBarTitleText": "常见问题",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "order/transfer",
+              "style": {
+                "navigationBarTitleText": "转赠",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "collection/collectionList",
+              "style": {
+                "navigationBarTitleText": "藏品列表",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "collection/boxRecord",
+              "style": {
+                "navigationBarTitleText": "开盒记录",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "user/integral/index",
+              "style": {
+                "navigationBarTitleText": "积分",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "mix/index",
+              "style": {
+                "navigationBarTitleText": "合成",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "mix/illustrate",
+              "style": {
+                "navigationBarTitleText": "点亮说明",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "mix/success",
+              "style": {
+                "navigationBarTitleText": "完成点亮",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "mix/list",
+              "style": {
+                "navigationBarTitleText": "点亮空间",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "main/question",
+              "style": {
+                "navigationBarTitleText": "常见问题",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "main/activity",
+              "style": {
+                "navigationBarTitleText": "活动日历",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "orderList/lightUp",
+              "style": {
+                "navigationBarTitleText": "点亮记录",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "recovery/index",
+              "style": {
+                "navigationBarTitleText": "藏品回购",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "recovery/list",
+              "style": {
+                "navigationBarTitleText": "官方回购",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "recovery/record",
+              "style": {
+                "navigationBarTitleText": "我的回购记录",
+                "enablePullDownRefresh": false
+              }
+            },
+            {
+              "path": "recovery/confirm",
+              "style": {
+                "navigationBarTitleText": "回购订单确认",
+                "enablePullDownRefresh": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "S.N.T",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF",
+    "navigationStyle": "custom",
+    "onReachBottomDistance": 150
+  },
+  "tabBar": {
+    "color": "#C0C4CC",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/nft/main/home",
+        "iconPath": "static/tabbar/tab-home.png",
+        "selectedIconPath": "static/tabbar/tab-home-current.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/nft/collection/list",
+        "iconPath": "static/tabbar/tab-collection.png",
+        "selectedIconPath": "static/tabbar/tab-collection-current.png",
+        "text": "藏品"
+      },
+      {
+        "pagePath": "pages/nft/user/index",
+        "iconPath": "static/tabbar/tab-my.png",
+        "selectedIconPath": "static/tabbar/tab-my-current.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

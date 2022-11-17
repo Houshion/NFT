@@ -1,0 +1,26 @@
+{
+	"id": "uview-ui",
+	"scripts": {
+		"build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+		"build:h5-test": "cross-env NODE_ENV=test UNI_PLATFORM=h5 vue-cli-service uni-build",
+		"build:h5-dev": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-build",
+		"dev:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-serve --watch",
+		"dev:h5-test": "cross-env NODE_ENV=test UNI_PLATFORM=h5 vue-cli-service uni-serve --watch",
+		"dev:h5-dev": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve --watch"
+	},
+	"dependencies": {
+		"@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+		"axios": "^0.27.2",
+		"crypto-js": "^4.1.1",
+		"u-qrcode": "^3.2.2",
+		"vconsole": "^3.14.6",
+		"verify5": "^1.3.5",
+		"verify5-html": "^2.6.1",
+		"vuex": "^4.0.2"
+	},
+	"devDependencies": {
+		"@babel/plugin-proposal-optional-chaining": "^7.18.9",
+		"eslint": "^8.2.0",
+		"eslint-config-airbnb": "^19.0.0"
+	}
+}

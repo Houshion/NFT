@@ -1,0 +1,273 @@
+// 此文件为uView的主题变量，这些变量目前只能通过uni.scss引入才有效，另外由于
+// uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故uni.scss只建议放scss变量名相关样式，其他的样式可以通过main.js或者App.vue引入
+
+$u-main-color: #303133;
+$u-content-color: #606266;
+$u-tips-color: #909193;
+$u-light-color: #c0c4cc;
+$u-border-color: #dadbde;
+$u-bg-color: #f3f4f6;
+$u-disabled-color: #c8c9cc;
+
+$u-primary: #3c9cff;
+$u-primary-dark: #398ade;
+$u-primary-disabled: #9acafc;
+$u-primary-light: #ecf5ff;
+
+$u-warning: #f9ae3d;
+$u-warning-dark: #f1a532;
+$u-warning-disabled: #f9d39b;
+$u-warning-light: #fdf6ec;
+
+$u-success: #5ac725;
+$u-success-dark: #53c21d;
+$u-success-disabled: #a9e08f;
+$u-success-light: #f5fff0;
+
+$u-error: #f56c6c;
+$u-error-dark: #e45656;
+$u-error-disabled: #f7b2b2;
+$u-error-light: #fef0f0;
+
+$u-info: #909399;
+$u-info-dark: #767a82;
+$u-info-disabled: #c4c6c9;
+$u-info-light: #f4f4f5;
+
+// scss混入，为了少写几行#ifndef
+@mixin flex($direction: row) {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: $direction;
+}
+
+/* 页面左右间距 */
+$page-row-spacing: 30upx;
+$page-color-base: #f8f8f8;
+$page-color-light: #f8f6fc;
+$base-color: #fa436a;
+
+/* 文字尺寸 */
+$font-sm: 24upx;
+$font-base: 28upx;
+$font-lg: 32upx;
+/*文字颜色*/
+$font-color-dark: #303133;
+$font-color-base: #606266;
+$font-color-light: #909399;
+$font-color-disabled: #c0c4cc;
+$font-color-spec: #4399fc;
+/* 边框颜色 */
+$border-color-dark: #dcdfe6;
+$border-color-base: #e4e7ed;
+$border-color-light: #ebeef5;
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+/* 行为相关颜色 */
+$uni-color-primary: #fa436a;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/********************* SNT定义颜色 ***********************/
+
+$main_color: #131b32;
+$minor_color: #ddf24b;
+$record_color: #f98e2d;
+$login_title_color: #000000;
+$white_color: #ffffff;
+$red_color: #e54c51;
+$black_color: #000000;
+$tips_color: #aeb5bf;
+$cell_value_color: #8b9199;
+$info_light: #b3b3b3;
+$text_default: #333333;
+$text_tips: #a2a9b2;
+$label_color: #31425c;
+$btn_color: #00f9fd;
+$main_btn_color: #131b32;
+$input_bg_color: #f4fcff;
+$text_gray: #5d6166;
+
+$u-main-color: #303133;
+$u-content-color: #606266;
+$u-tips-color: #909399;
+$u-light-color: #c0c4cc;
+$u-border-color: #f0f0f0;
+$u-bg-color: #f3f4f6;
+
+$u-type-primary: #131b32;
+$u-type-primary-light: #ecf5ff;
+$u-type-primary-disabled: #a0cfff;
+$u-type-primary-dark: #2b85e4;
+
+$u-type-warning: #ff9900;
+$u-type-warning-disabled: #fcbd71;
+$u-type-warning-dark: #f29100;
+$u-type-warning-light: #fdf6ec;
+
+$u-type-success: #19be6b;
+$u-type-success-disabled: #71d5a1;
+$u-type-success-dark: #18b566;
+$u-type-success-light: #dbf1e1;
+
+$u-type-error: #fa3534;
+$u-type-error-disabled: #fab6b6;
+$u-type-error-dark: #dd6161;
+$u-type-error-light: #fef0f0;
+
+$u-type-info: #909399;
+$u-type-info-disabled: #c8c9cc;
+$u-type-info-dark: #82848a;
+$u-type-info-light: #f4f4f5;
+
+$u-form-item-height: 70rpx;
+$u-form-item-border-color: #dcdfe6;
+
+.main_color {
+  color: $main_color;
+}
+
+.main_bg_color {
+  background-color: $main_color;
+}
+
+.minor_color {
+  color: $minor_color;
+}
+
+.minor_bg_color {
+  background-color: $minor_color;
+}
+
+.fff {
+  color: $white_color;
+}
+
+.price_color {
+  color: #ff6b6b;
+}
+
+.info {
+  color: $u-type-info-dark;
+}
+
+.info_l {
+  color: $info-light;
+}
+
+.bg_info {
+  background: $u-type-info-light;
+}
+
+.dark {
+  color: $black_color;
+}
+
+.white {
+  color: $white_color;
+}
+
+.bg_fff {
+  background: $white_color;
+}
+
+.bg_base {
+  background: #f7f7f7;
+}
+
+.tips_color {
+  color: $tips_color;
+}
+
+.c999 {
+  color: #999999;
+}
+
+.c666 {
+  color: #666666;
+}
+
+.c333 {
+  color: #333333;
+}
+
+.text_gray {
+  color: $text_gray;
+}
+
+.info_light {
+  color: $info_light;
+}
+
+.label_color {
+  color: $label_color;
+}
+
+.login_title_color {
+  color: $login_title_color;
+}
+
+.code_color {
+  color: #fc952c;
+}
+
+.record_color {
+  color: $record_color;
+}
+
+/********************* 线条边框 ***********************/
+
+.border {
+  border: solid 1px $u-border-color !important;
+}
+
+.border_l {
+  border-left: solid 1px $u-border-color !important;
+}
+
+.border_r {
+  border-right: solid 1px $u-border-color !important;
+}
+
+.border_t {
+  border-top: solid 1px $u-border-color !important;
+}
+
+.border_b {
+  border-bottom: solid 1px $u-border-color !important;
+}
+
+.main_btn {
+  height: 88upx;
+  line-height: 88upx;
+  border-radius: 30px;
+  background: $main_btn_color;
+  color: $white_color;
+  font-size: 30upx;
+  font-weight: 600;
+}
+
+.minor_btn {
+  border-radius: 30px;
+  background: $minor_color;
+  font-size: 24upx;
+  padding: 10upx 30upx;
+}
+
+.none_btn {
+  border-radius: 30px;
+  background: #dfe8f5;
+  font-size: 24upx;
+  padding: 10upx 30upx;
+}
+
+.check_btn {
+  height: 88upx;
+  line-height: 88upx;
+  border-radius: 30px;
+  font-size: 30upx;
+  font-weight: 600;
+}

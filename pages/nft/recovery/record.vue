@@ -1,0 +1,141 @@
+<template>
+  <view class="list">
+    <com-page title="我的回购记录" :border="false">
+      <view class="orderList">
+        <template v-if="list.length > 0">
+          <scroll-view
+            scroll-y
+            class="scroll_list"
+            lower-threshold="0"
+            @scrolltolower="scrolltolower"
+          >
+            <view class="orderBox" v-for="(item, index) in list" :key="index">
+              <view class="title"> 这是活动的名称 </view>
+              <view class="mg_t_10 flex_between">
+                <u--image
+                  :src="item.productCover"
+                  width="160upx"
+                  height="160upx"
+                  radius="10upx"
+                  class="img"
+                ></u--image>
+                <view class="msg flex_v_between">
+                  <view class="wd_100">
+                    <view class="name font_b over_el_1">
+                      {{ item.productName }}
+                    </view>
+                    <view class="flex mg_t_5">
+                      <view class="tag" v-for="item in 3" :key="item">
+                        #{{ item }}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="time wd_100">{{
+                    item.createTime | timeStr
+                  }}</view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </template>
+        <template v-else>
+          <u-empty
+            width="185px"
+            text="暂无订单"
+            :icon="require(`@/static/images/none/ic_wdd.png`)"
+          >
+          </u-empty>
+        </template>
+      </view>
+    </com-page>
+    <u-back-top :scroll-top="scrollTop"></u-back-top>
+  </view>
+</template>
+  
+  <script>
+import { lightList } from "@/api/nft/lightUp";
+export default {
+  data() {
+    return {
+      // 公告列表
+      list: [
+        {
+          createTime: 1666774387000,
+          productCover: require("@/static/images/test/test.png"),
+          productName: "赛博龙",
+        },
+      ],
+      // 返回顶部距离
+      scrollTop: 0,
+      // 按钮样式
+      // 表单信息
+      form: {
+        orderStatus: 0, //0:全部,1:待支付,2:交易成功,3:交易关闭
+        pageNum: 1, //页码
+        pageSize: 10, //条数
+      },
+    };
+  },
+  onShow() {
+    // this.init();
+  },
+  methods: {
+    // 初始化参数
+    init() {
+      this.list = [];
+      this.form.pageNum = 1;
+      this.getList();
+    },
+    // 获取列表信息
+    getList() {
+      lightList(this.form).then(({ data }) => {
+        this.list = [...this.list, ...data];
+      });
+    },
+    // 前往详情
+    goDetail(id) {
+      uni.navigateTo({
+        url: `/pages/nft/orderList/detail?type=4&orderId=${id}`,
+      });
+    },
+    // 触底刷新
+    scrolltolower() {
+      this.form.pageNum++;
+      this.getList();
+    },
+  },
+};
+</script>
+  
+  <style lang="scss" scoped>
+.list {
+  height: 100%;
+}
+.orderList {
+  background: #f7f7f7;
+  padding: 30upx;
+  max-height: calc(100% - 88upx); // 88upx为navbar/tabs的高度……30upx为内间距
+  .orderBox {
+    background: #fff;
+    border-radius: 14upx;
+    margin-bottom: 30upx;
+    padding: 30upx;
+    .title {
+      font-size: 32upx;
+      font-weight: bold;
+      color: $black_color;
+    }
+    .time {
+      color: $tips_color;
+      font-size: 24upx;
+    }
+    .msg {
+      width: calc(100% - 180upx);
+      .btns {
+        height: 50upx;
+      }
+    }
+  }
+}
+</style>
+  
